@@ -27,7 +27,6 @@ export const TAILWIND_THEMES = {
       border: "240 5.9% 90%",
       input: "240 5.9% 90%",
       ring: "240 5.9% 10%",
-      radius: "0.5rem",
     },
     dark: {
       background: "240 10% 3.9%",
@@ -50,6 +49,7 @@ export const TAILWIND_THEMES = {
       input: "240 3.7% 15.9%",
       ring: "240 4.9% 83.9%",
     },
+    radius: "0.5rem",
   },
   sand: {
     light: {
@@ -72,7 +72,6 @@ export const TAILWIND_THEMES = {
       border: "240 5.9% 90%",
       input: "240 5.9% 90%",
       ring: "240 5.9% 10%",
-      radius: "0.5rem",
     },
     dark: {
       background: "240 10% 3.9%",
@@ -95,6 +94,7 @@ export const TAILWIND_THEMES = {
       input: "240 3.7% 15.9%",
       ring: "240 4.9% 83.9%",
     },
+    radius: "0.5rem",
   },
   'neutral': {
     light: {
@@ -139,6 +139,7 @@ export const TAILWIND_THEMES = {
       input: "0 0% 14.9%",
       ring: "0 0% 83.1%",
     },
+    radius: '0.5rem'
   },
   'slate': {
     light: {
@@ -161,7 +162,6 @@ export const TAILWIND_THEMES = {
       border: "214.3 31.8% 91.4%",
       input: "214.3 31.8% 91.4%",
       ring: "222.2 84% 4.9%",
-      radius: "0.5rem",
     },
     dark: {
       background: "222.2 84% 4.9%",
@@ -184,6 +184,7 @@ export const TAILWIND_THEMES = {
       input: "217.2 32.6% 17.5%",
       ring: "212.7 26.8% 83.9",
     },
+    radius: "0.5rem",
   },
   'stone': {
     light: {
@@ -206,7 +207,6 @@ export const TAILWIND_THEMES = {
       border: "20 5.9% 90%",
       input: "20 5.9% 90%",
       ring: "20 14.3% 4.1%",
-      radius: "0.95rem",
     },
     dark: {
       background: "20 14.3% 4.1%",
@@ -229,6 +229,7 @@ export const TAILWIND_THEMES = {
       input: "12 6.5% 15.1%",
       ring: "24 5.7% 82.9%",
     },
+    radius: "0.95rem",
   },
   'gray': {
     light: {
@@ -251,7 +252,6 @@ export const TAILWIND_THEMES = {
       border: "220 13% 91%",
       input: "220 13% 91%",
       ring: "224 71.4% 4.1%",
-      radius: "0.35rem",
     },
     dark: {
       background: "224 71.4% 4.1%",
@@ -274,6 +274,7 @@ export const TAILWIND_THEMES = {
       input: "215 27.9% 16.9%",
       ring: "216 12.2% 83.9%",
     },
+    radius: "0.35rem",
   },
   'red': {
     light: {
@@ -296,7 +297,6 @@ export const TAILWIND_THEMES = {
       border: "0 0% 89.8%",
       input: "0 0% 89.8%",
       ring: "0 72.2% 50.6%",
-      radius: "0.4rem",
     },
     dark: {
       background: "0 0% 3.9%",
@@ -319,6 +319,7 @@ export const TAILWIND_THEMES = {
       input: "0 0% 14.9%",
       ring: "0 72.2% 50.6%",
     },
+    radius: "0.4rem",
   },
   'rose': {
     light: {
@@ -341,7 +342,6 @@ export const TAILWIND_THEMES = {
       border: "240 5.9% 90%",
       input: "240 5.9% 90%",
       ring: "346.8 77.2% 49.8%",
-      radius: "0.5rem",
     },
     dark: {
       background: "20 14.3% 4.1%",
@@ -364,6 +364,7 @@ export const TAILWIND_THEMES = {
       input: "240 3.7% 15.9%",
       ring: "346.8 77.2% 49.8%",
     },
+    radius: "0.5rem",
   },
   'orange': {
     light: {
@@ -386,7 +387,6 @@ export const TAILWIND_THEMES = {
       border: "20 5.9% 90%",
       input: "20 5.9% 90%",
       ring: "24.6 95% 53.1%",
-      radius: "0.95rem",
     },
     dark: {
       background: "20 14.3% 4.1%",
@@ -409,6 +409,7 @@ export const TAILWIND_THEMES = {
       input: "12 6.5% 15.1%",
       ring: "20.5 90.2% 48.2%",
     },
+    radius: "0.95rem",
   },
   'green': {
     light: {
@@ -453,6 +454,7 @@ export const TAILWIND_THEMES = {
       input: "240 3.7% 15.9%",
       ring: "142.4 71.8% 29.2%",
     },
+    radius: "0.5rem",
   },
   'blue': {
     light: {
@@ -497,6 +499,7 @@ export const TAILWIND_THEMES = {
       input: "217.2 32.6% 17.5%",
       ring: "224.3 76.3% 48%",
     },
+    radius: "0.35rem",
   },
   'yellow': {
     light: {
@@ -519,7 +522,6 @@ export const TAILWIND_THEMES = {
       border: "20 5.9% 90%",
       input: "20 5.9% 90%",
       ring: "20 14.3% 4.1%",
-      radius: "0.95rem",
     },
     dark: {
       background: "20 14.3% 4.1%",
@@ -542,6 +544,7 @@ export const TAILWIND_THEMES = {
       input: "12 6.5% 15.1%",
       ring: "35.5 91.7% 32.9%",
     },
+    radius: "0.95rem",
   },
   'violet': {
     light: {
@@ -586,6 +589,7 @@ export const TAILWIND_THEMES = {
       input: "215 27.9% 16.9%",
       ring: "263.4 70% 50.4%",
     },
+    radius: "0.95rem",
   },
 }
 

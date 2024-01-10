@@ -52,22 +52,25 @@ const DARK_COLOR_VARIABLES = {
 export const defineShadcn = plugin.withOptions(
   (opt: ShadcnTheme) => {
     const base = opt.base ?? 'zinc'
-    const colors = TAILWIND_THEMES[base];
+    const theme = TAILWIND_THEMES[base];
     const getLightThemeTokenValue = (value: string, key: string): string => {
       const token = key.replace(/--/,'') as TokenKey;
-      return colors.light[token]
+      return theme.light[token]
 
     }
     const getDarkThemeTokenValue = (value: string, key: string): string => {
       const token = key.replace(/--/,'') as TokenKey;
-      return colors.dark[token]
+      return theme.dark[token]
 
     }
 
     // Return pluginCreator
     return ({ addBase }) => {
       addBase({
-        ':root': _.mapValues(ROOT_COLOR_VARIABLES,getLightThemeTokenValue),
+        ':root': {
+          ..._.mapValues(ROOT_COLOR_VARIABLES,getLightThemeTokenValue),
+          '--radius': theme.radius
+        },
         '.dark': _.mapValues(DARK_COLOR_VARIABLES,getDarkThemeTokenValue),
         '*': {
           borderColor: 'theme(colors.border)',
