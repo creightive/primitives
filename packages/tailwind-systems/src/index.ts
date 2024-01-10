@@ -1,9 +1,11 @@
 import { fontFamily } from 'tailwindcss/defaultTheme'
 import plugin from 'tailwindcss/plugin'
-import type { ShadcnTheme } from './lib/types'
-// import mapValues from 'lodash.mapvalues'
+import type {ShadcnColorTokens, ShadcnTheme} from './lib/types'
+import {TAILWIND_THEMES, TokenKey} from "./lib/themes";
+import _ from 'lodash'
 
-const ROOT_COLORS_VARIABLES = {
+
+const ROOT_COLOR_VARIABLES = {
   '--background': '<%- colors.light["background"] %>',
   '--foreground': '<%- colors.light["foreground"] %>',
   '--card': '<%- colors.light["card"] %>',
@@ -25,7 +27,7 @@ const ROOT_COLORS_VARIABLES = {
   '--ring': '<%- colors.light["ring"] %>',
 }
 
-const DARK_COLORS_VARIABLES = {
+const DARK_COLOR_VARIABLES = {
   '--background': '<%- colors.dark["background"] %>',
   '--foreground': '<%- colors.dark["foreground"] %>',
   '--card': '<%- colors.dark["card"] %>',
@@ -47,18 +49,26 @@ const DARK_COLORS_VARIABLES = {
   '--ring': '<%- colors.dark["ring"] %>',
 }
 
-const light: Record<string, string> = {}
-const dark: Record<string, string> = {}
-// const getLightColorFromKey = (_, k, c) => light[k]
-// const getDarkColorFromKey = (_, k, c) => dark[k]
-
 export const defineShadcn = plugin.withOptions(
   (opt: ShadcnTheme) => {
+    const base = opt.base ?? 'zinc'
+    const colors = TAILWIND_THEMES[base];
+    const getLightThemeTokenValue = (value: string, key: string): string => {
+      const token = key.replace(/--/,'') as TokenKey;
+      return colors.light[token]
+
+    }
+    const getDarkThemeTokenValue = (value: string, key: string): string => {
+      const token = key.replace(/--/,'') as TokenKey;
+      return colors.dark[token]
+
+    }
+
+    // Return pluginCreator
     return ({ addBase }) => {
-      // TODO: based on options grab base color and map variables objects
       addBase({
-        ':root': ROOT_COLORS_VARIABLES,
-        '.dark': DARK_COLORS_VARIABLES,
+        ':root': _.mapValues(ROOT_COLOR_VARIABLES,getLightThemeTokenValue),
+        '.dark': _.mapValues(DARK_COLOR_VARIABLES,getDarkThemeTokenValue),
         '*': {
           borderColor: 'theme(colors.border)',
         },
@@ -69,7 +79,7 @@ export const defineShadcn = plugin.withOptions(
       })
     }
   },
-  (opt: ShadcnTheme) => {
+  (_: ShadcnTheme) => {
     // TODO: theme utilities
     return {
       darkMode: ['class'],

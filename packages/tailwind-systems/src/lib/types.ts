@@ -1,3 +1,5 @@
+import {TAILWIND_THEMES} from "./themes";
+
 export type ShadcnColorTokens = {
   background: string
   foreground: string
@@ -25,7 +27,7 @@ export interface ShadcnTheme {
   /**
    * Gray is a key neutral color and is the crux of any UI design. Majority of the UI design elements like text, forms, shadows, backgrounds, dividers are all usually gray.
    */
-  base?: 'slate' | 'gray' | 'stone' | 'neutral' | 'zinc'
+  base?: keyof typeof TAILWIND_THEMES
   /**
    *
    */

@@ -111,6 +111,9 @@ importers:
 
   packages/tailwind-systems:
     dependencies:
+      lodash:
+        specifier: ^4.17.21
+        version: 4.17.21
       lodash.mapkeys:
         specifier: ^4.6.0
         version: 4.6.0
@@ -130,12 +133,9 @@ importers:
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
-      '@types/lodash.mapkeys':
-        specifier: ^4.6.9
-        version: 4.6.9
-      '@types/lodash.values':
-        specifier: ^4.3.9
-        version: 4.3.9
+      '@types/lodash':
+        specifier: ^4.14.202
+        version: 4.14.202
       eslint:
         specifier: ^8.56.0
         version: 8.56.0
@@ -4143,20 +4143,12 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: true
 
-  /@types/lodash.mapkeys@4.6.9:
-    resolution: {integrity: sha512-6/ERBCabeDI656LsV+oopLjdnJ/x1PCAE6kkkssH8e4i0K7Pw307noxHCbUc6cAVfTo9vx0Z+k3QZwy1IrUZcA==}
-    dependencies:
-      '@types/lodash': 4.14.191
-    dev: true
-
-  /@types/lodash.values@4.3.9:
-    resolution: {integrity: sha512-IJ20OEfqNwm3k8ENwoM3q0yOs4UMpgtD4GqxB4lwBHToGthHWqhyh5DdSgQjioocz0QK2SSBkJfCq95ZTV8BTw==}
-    dependencies:
-      '@types/lodash': 4.14.191
-    dev: true
-
   /@types/lodash@4.14.191:
     resolution: {integrity: sha512-BdZ5BCCvho3EIXw6wUCXHe7rS53AIDPLE+JzwgT+OsJk53oBfbSmZZ7CX4VaRoN78N+TJpFi9QPlfIVNmJYWxQ==}
+    dev: true
+
+  /@types/lodash@4.14.202:
+    resolution: {integrity: sha512-OvlIYQK9tNneDlS0VN54LLd5uiPCBOp7gS5Z0f1mjoJYBrtStzgmJBxONW3U6OZqdtNzZPmn9BS/7WI7BFFcFQ==}
     dev: true
 
   /@types/mdast@3.0.12:
