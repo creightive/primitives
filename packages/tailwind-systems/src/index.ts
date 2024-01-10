@@ -86,7 +86,6 @@ export const defineShadcn = plugin.withOptions(
     // TODO: theme utilities
     return {
       darkMode: ['class'],
-      content: ['app/**/*.{ts,tsx}', 'components/**/*.{ts,tsx}'],
       theme: {
         container: {
           center: true,
@@ -135,9 +134,6 @@ export const defineShadcn = plugin.withOptions(
             lg: `var(--radius)`,
             md: `calc(var(--radius) - 2px)`,
             sm: 'calc(var(--radius) - 4px)',
-          },
-          fontFamily: {
-            sans: ['var(--font-sans)', ...fontFamily.sans],
           },
           keyframes: {
             'accordion-down': {

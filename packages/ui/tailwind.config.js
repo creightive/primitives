@@ -50,9 +50,11 @@ const tailwindTheme = {
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  content: ['./src/components/**/*.{ts,tsx}', '../../docs/storybook/stories/**/*.{ts,tsx,mdx}'],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [defineShadcn({
+    base: 'zinc'
+  })],
 }

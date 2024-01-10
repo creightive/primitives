@@ -1,3 +1,5 @@
+import '@creightive/ui/styles.css'
+
 /** @type { import('@storybook/react').Preview } */
 const preview = {
   parameters: {

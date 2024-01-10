@@ -10,17 +10,17 @@
     "dist/**"
   ],
   "exports": {
-    "./styles": "./dist/index.css",
+    "./styles.css": "./dist/styles.css",
     ".": {
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
     }
   },
   "scripts": {
-    "build:css": "postcss src/css/main.css -o dist/styles.css",
+    "build:css": "tailwind src/css/main.css -o dist/styles.css",
     "build:js": "tsup src/index.tsx --format esm,cjs --dts --external react",
     "build": "concurrently \"pnpm build:css\" \"pnpm build:js\"",
-    "dev:css": "postcss src/css/main.css -o dist/styles.css --watch",
+    "dev:css": "tailwind src/css/main.css -o dist/styles.css --watch",
     "dev:js": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
     "dev": "concurrently \"pnpm dev:css\" \"pnpm dev:js\"",
     "lint": "eslint . --max-warnings 0",
